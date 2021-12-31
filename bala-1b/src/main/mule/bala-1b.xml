@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="08d777cc-7f99-457f-8247-1c2b206b0be5" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="bala-1bFlow" doc:id="15e98328-5b24-4210-b176-58819329d749" >
+		<http:listener doc:name="Listener" doc:id="44a5e01a-74ca-43a5-a33a-286c7c0cdb09" config-ref="HTTP_Listener_config" path="test"/>
+		<set-payload value="payload---------------------bala-1b" doc:name="Set Payload" doc:id="79bf4713-0fed-45f3-8849-c5f871665e30" />
+	</flow>
+</mule>
